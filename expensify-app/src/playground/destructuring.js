@@ -1,42 +1,45 @@
-// Object destructuring
-
 // const person = {
-//     name: 'Eric',
-//     age: 24,
-//     location: {
-//         city: 'Baton Rouge',
-//         temp: 90
-//     }
+//   name: 'Andrew',
+//   age: 26,
+//   location: {
+//     city: 'Philadelphia',
+//     temp: 92
+//   }
 // };
 
-// const { name: firstName = 'Anonymous', age } = person;
-
-// console.log(`${firstName} is ${age}.`)
-
+// // destructuring
+// const { name: first = 'Anon', age} = person;
 // const { city, temp: temperature } = person.location;
 
-// if (city && temperature) {
-//     console.log(`It's ${temperature} in ${city}.`)
-// }
+// console.log(first)
 
-// const book = {
-//     title: 'Ego is the Enemy',
-//     author: 'Ryan Holiday',
-//     publisher: {
-//         name: 'Penguin'
-//     }
-// }
+// console.log(`it's ${name} here`)
 
-// const { name: publisherName = 'Self-Published' } = book.publisher;
+const book = {
+  title: 'Ego is the Enemy',
+  author: 'Ryan Holiday',
+  publisher: {
+    name: 'Penguin'
+  }
+}
 
-// console.log(publisherName);
+const { title, author } = book;
+// console.log(author + ' wrote ' + title);
 
-// Array destructuring
+const { name: publisherName = 'Self-published'} = book.publisher;
+// console.log(publisherName)
 
-const address = ['999 N 9th St', 'Baton Rouge', 'Louisiana', '70802'];
-const [ , city, state = 'New York' ] = address;
-console.log(`You are in ${city} ${state}.`)
 
-const item = ['Coffee (hot)', '$2.00', '$2.50', '%2.75']
-const [ coffee, , medium ] = item
-console.log(`A medium ${coffee} costs ${medium}`)
+// Array destructuring below, {} destructuring above
+
+const address = ['1300 North Green Blvd', 'Seattle', 'Washington', '90210']
+
+const [street, city, state, zip] = address;
+
+// console.log(state)
+// console.log(`you are in ${address[1]} ${address[2]} `)
+
+const menu = ['coffee', '2.00', '2.50', '2.75']
+
+const [item, s, m, l] = menu;
+console.log(`a medium ${item} cost ${m}`)
