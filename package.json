@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "http://eelcire.github.io/react-indecision-app",
+  "homepage": "http://eelcire.github.io/react-indecision-app/",
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",
